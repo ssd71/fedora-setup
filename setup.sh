@@ -26,6 +26,10 @@ if [ "$1" == "nonfree" ]
             https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 fi        
 
+# Rustup and Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+source $HOME/.cargo/env
+
 # Visual Studio Code
 
 # Install key and repository
